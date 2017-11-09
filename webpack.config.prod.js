@@ -35,18 +35,23 @@ export default {
     new HtmlWebpackPlugin({
       template : 'src/index.html',
       minify: {
-        removeComments : true,
-        collapseWhitespace : true,
-        removeRedundantAttributes : true,
-        useShortDoctype : true,
-        removeEmptyAttributes : true,
-        removeStyleLinkTypeAttributes : true,
-        keepClosingSlash : true,
-        minifyJS : true,
-        minifyCSS : true,
-        minifyURLs :true
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs:true
       },
-      inject : true
+      inject : true,
+
+      // Properties you define here are availabale in index.html
+      // using htmlWebpackPlugin.options.varName
+      trackJSToken: ''
+
     }),
 
     // Eliminate duplicate packages when generating bundles
